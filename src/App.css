@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.sort-filter {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+}
+
+.kanban-group {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.ticket-list {
+  margin-top: 10px;
+}
+
+.ticket-card {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.ticket-card h4 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.ticket-card p {
+  margin: 4px 0;
+  font-size: 0.9em;
+}
