@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
-import SortFilter from "./components/SortFilter";
-import KanbanBoard from "./components/KanbanBoard";
+import SortFilter from "./components/SortFilter.jsx";
+import KanbanBoard from "./components/KanbanBoard.jsx";
 
 function App() {
   const [tickets, setTickets] = useState([]);
