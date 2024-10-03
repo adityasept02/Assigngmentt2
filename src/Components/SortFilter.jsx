@@ -1,5 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React, { useState } from "react";
+import "./SortFilter.css";
+import filterIcon from '../assets/Display.svg';
 
 const SortFilter = ({ grouping, setGrouping, sortOptions, setSortOptions }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,14 +10,15 @@ const SortFilter = ({ grouping, setGrouping, sortOptions, setSortOptions }) => {
     setIsVisible((prev) => !prev);
   };
   return (
-    <div>
-      <button onClick={toggleVisibility}>
+    <div className="header">
+      <button className="btn" onClick={toggleVisibility}>
+        <img src={filterIcon} alt="filter icon" />
         {isVisible ? "Hide Filters" : "Display Filters"}
       </button>
       {isVisible && (
         <div className="sort-filter">
-          <div className="grouping-section">
-            <label>Group By:</label>
+          <div className="grouping-section filter-section">
+            <label>Grouping</label>
             <select
               value={grouping}
               onChange={(e) => setGrouping(e.target.value)}
@@ -25,8 +28,8 @@ const SortFilter = ({ grouping, setGrouping, sortOptions, setSortOptions }) => {
               <option value="priority">Priority</option>
             </select>
           </div>
-          <div className="sorting-section">
-            <label>Sort By:</label>
+          <div className="sorting-section filter-section">
+            <label>Ordering</label>
             <select
               value={sortOptions}
               onChange={(e) => setSortOptions(e.target.value)}
